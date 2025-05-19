@@ -7,7 +7,10 @@
 
 ## 🛠️ Tech Stack
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=python,fastapi,jupyter,sklearn,pandas,supabase,matplotlib,numpy,tensorflow,seaborn" />
+  <img src="https://skillicons.dev/icons?i=python,fastapi,jupyter,pandas,numpy,matplotlib,tensorflow" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" width="40" title="Scikit-learn" />
+  <img src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" width="40" title="Supabase" />
+  <img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" width="80" title="Seaborn" />
 </p>
 
 ---
