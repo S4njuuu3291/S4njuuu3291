@@ -20,18 +20,9 @@
 
 ---
 
-## 🐍 Watch My Contribution Graph Slither
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/S4njuuu3291/S4njuuu3291/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/S4njuuu3291/S4njuuu3291/output/github-contribution-grid-snake.svg" />
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/S4njuuu3291/S4njuuu3291/output/github-contribution-grid-snake.svg" />
-</picture>
-
----
-
 ## 🚀 Highlight Projects
 
-- 💳 [German Credit Data](https://github.com/S4njuuu3291/german-credit-data) — Credit scoring with cleaning, detailed EDA, feature engineering, and model comparison
+- 💳 [German Credit Data](https://github.com/S4njuuu3291/german-credit-data) — Credit scoring with cleaning, detailed EDA, feature engineering, and modeling with F1-Score ≈ 69%
 
 ---
 
