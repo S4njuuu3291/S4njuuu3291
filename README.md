@@ -34,7 +34,7 @@
 ## 🚀 Highlight Projects
 
 - 💳 [German Credit Data](https://github.com/S4njuuu3291/german-credit-data) — Credit scoring with cleaning, detailed EDA, feature engineering, and modeling with F1-Score ≈ 69%
-
+- 🏠 [Medan Property Price Prediction](https://github.com/S4njuuu3291/TrenHargaRumah.git) —  End-to-end ML project: scraping data listing properti Medan, cleaning, EDA, XGBoost regression, tuning, dan dashboard Streamlit. **Best R2:** 0.78 | **MAE:** Rp 700jt | **Live Demo:** [Streamlit App](https://hargarumahmedan.streamlit.app/)  
 ---
 
 ## 📬 Let's Connect
