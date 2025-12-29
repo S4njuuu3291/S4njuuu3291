@@ -1,87 +1,93 @@
 <p align="center">
-  <img src="https://avatars.githubusercontent.com/u/110361282?s=400&u=176ba692dfbc614ce72f69e38343bba9ee35155e&v=4" width="120" height="120" style="border-radius: 50%;" alt="Profile Picture"/>
+  <img src="https://avatars.githubusercontent.com/u/110361282?s=400&v=4" width="110" height="110" style="border-radius: 50%;" />
 </p>
 
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=2500&pause=800&center=true&vCenter=true&width=600&lines=Hi+there,+I'm+Sanju+👋;CS+Student+@Unpad;Future+Data+Engineer+🧱;ETL,+Cloud,+and+Data+Pipeline+Enthusiast" alt="Typing Header" />
-</p>
+<h2 align="center">Sanju</h2>
+<p align="center"><strong>Data Engineer</strong> • Event-driven & Batch Data Pipelines</p>
 
 ---
 
-## 🛠️ Tech Stack
-<p align="center">
-  <!-- Core -->
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" title="Python" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" width="40" title="Bash" />
-  
-  <!-- Orchestration -->
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" width="40" title="Apache Airflow" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" title="Docker" />
+### 👋 About Me
+I am a Computer Science student with a strong focus on **Data Engineering**.
 
-  <!-- Cloud & Data -->
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" width="40" title="Google Cloud Platform" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="40" title="PostgreSQL" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40" title="MySQL" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" width="40" title="SQLAlchemy" />
+I build **reliable, production-style data pipelines** — from ingestion and orchestration to transformation and analytics-ready datasets — using modern tools commonly adopted in industry.
 
-  <!-- ETL / Data Tools -->
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width="40" title="Pandas" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" width="40" title="NumPy" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dbt/dbt-original.svg" width="40" title="dbt" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" width="40" title="FastAPI" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" title="Git" />
-
-  <!-- ML / Analytics (minor) -->
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" width="40" title="Scikit-learn" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" width="40" title="TensorFlow" />
-</p>
+My work emphasizes:
+- data reliability & idempotency
+- clear pipeline architecture
+- schema-aware ingestion
+- batch and streaming systems
 
 ---
 
-## 🚀 Highlight Projects
-
-### ☁️ [WeatherFlow - Daily Weather ETL Pipeline](https://github.com/S4njuuu3291/phase2-weatherflow-etl)
-End-to-end **data pipeline project** built with **Airflow + Docker + GCP**.  
-- Extracts daily weather data via API  
-- Transforms and validates data  
-- Loads to **PostgreSQL** and **BigQuery Data Warehouse**  
-- Includes **logging, modular pipeline design**, and future-ready hooks for alerting (Telegram, Slack)
-
-> 🧩 *Focus: Cloud-native ETL orchestration and data warehousing*
-
----
-
-### 🧠 [Medan Property Price Prediction](https://github.com/S4njuuu3291/TrenHargaRumah)
-End-to-end **ML + Data Engineering hybrid project**  
-- Web scraping housing listings (BeautifulSoup)  
-- Data cleaning, EDA, feature engineering  
-- Model: XGBoost Regressor, tuned & evaluated  
-- Deployment via **Streamlit App**  
-> 📊 *R² = 0.78 | MAE ≈ Rp700jt*  
-> [🎯 Live Demo](https://hargarumahmedan.streamlit.app/)
+### 🧱 Core Engineering Stack
+- **Languages**: Python, SQL, Bash  
+- **Streaming**: Apache Kafka (Confluent, KRaft mode)  
+- **Orchestration**: Apache Airflow  
+- **Transformation & Modeling**: dbt  
+- **Databases**: PostgreSQL, BigQuery  
+- **Cloud**: Google Cloud Platform (GCS, BigQuery, Secret Manager)  
+- **Infrastructure**: Docker, Docker Compose  
+- **Data Quality**: Pydantic validation, dbt tests  
 
 ---
 
-## 📈 GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=S4njuuu3291&show_icons=true&theme=radical" height="160"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=S4njuuu3291&layout=compact&theme=radical" height="160"/>
-</p>
+### 🚀 Selected Projects
+
+#### 🔷 Crypto Streaming Pipeline — Kafka & PostgreSQL  
+**Real-time, event-driven data pipeline**
+
+- Ingests live trade events from Binance WebSocket  
+- Schema validation with Pydantic before Kafka publish  
+- Kafka producer with idempotence enabled  
+- Consumer commits offsets only after successful DB transaction  
+- Idempotent PostgreSQL sink using composite primary keys  
+
+**Tech**: Kafka (KRaft), Python, SQLAlchemy, PostgreSQL, Docker  
+🔗 Repo: https://github.com/S4njuuu3291/crypto-streaming-pipeline
 
 ---
 
-## 🧠 Current Focus
-> Building solid **Data Engineering foundations** — pipelines, data modeling, orchestration, and cloud infrastructure.
-> Exploring **real-world ETL automation**, monitoring, and metadata tracking.
+#### 🌍 Global Commodity Data Platform — Airflow, GCP, dbt  
+**Production-style batch data platform**
+
+- Multi-source ingestion (metals, FX, macro, news)  
+- Raw data persisted in GCS (Bronze layer)  
+- BigQuery warehouse with layered modeling  
+- dbt staging → dimension → fact → mart  
+- Incremental models, schema evolution, data tests  
+
+**Tech**: Airflow, GCP, BigQuery, dbt, Docker  
+🔗 Repo: https://github.com/S4njuuu3291/phase4_global_commodity
 
 ---
 
-## 📬 Let's Connect
-<p align="left">
-  <a href="https://www.linkedin.com/in/sanjukin-pinem/" target="_blank">
-    <img align="center" src="https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="mailto:sanju329121@gmail.com">
-    <img align="center" src="https://img.shields.io/badge/-Email-red?style=flat&logo=gmail&logoColor=white" />
-  </a>
-</p>
+#### 🌦️ Weather ETL Pipeline — Python & PostgreSQL  
+**Foundational ETL & automation**
+
+- API ingestion with clean Extract → Transform → Load separation  
+- Configuration-driven pipeline (YAML)  
+- Logging & error handling  
+- Automated scheduling via Cron  
+
+**Tech**: Python, PostgreSQL, SQLAlchemy, Cron  
+🔗 Repo: https://github.com/S4njuuu3291/porto-01-data-preprocessing
+
+---
+
+### 🧠 Engineering Interests
+- Event-driven architectures  
+- Streaming vs batch trade-offs  
+- Data modeling & analytics-ready datasets  
+- Reliability, replayability, and failure handling  
+
+---
+
+### 📌 Current Focus
+Deepening expertise in **streaming systems**, **distributed data processing**, and **production-grade pipeline design**.
+
+---
+
+### 📬 Contact
+- LinkedIn: https://www.linkedin.com/in/sanjukin-pinem  
+- Email: sanju329121@gmail.com
