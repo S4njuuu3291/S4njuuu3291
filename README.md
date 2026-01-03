@@ -113,5 +113,3 @@ Deepening expertise in **streaming systems**, **distributed data processing**, a
 * Email: [sanju329121@gmail.com](mailto:sanju329121@gmail.com)
 
 ---
-Kalau mau lanjut, saya sarankan **satu langkah terakhir**:
-
