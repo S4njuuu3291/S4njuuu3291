@@ -30,7 +30,7 @@ Computer Science student focused on **Data Engineering** — building reliable, 
 * **Batch Orchestration**: Apache Airflow 3.1+ (TaskFlow API)
 * **Transformation**: dbt 1.8+ (incremental models, tests)
 * **Databases**: PostgreSQL, BigQuery (partitioned & clustered)
-* **Cloud**: AWS (Lambda, S3, ECR, Glue, EventBridge, Athena) | GCP (GCS, BigQuery, Secret Manager)
+* **Cloud**: AWS (Lambda, S3, ECR, EventBridge, Athena) | GCP (GCS, BigQuery, Secret Manager)
 * **IaC & DevOps**: Terraform, Docker, GitHub Actions
 * **Data Quality**: Pydantic v2, Pandera, dbt tests, custom exceptions
 * **Testing**: pytest (115+ tests), httpx mocking, E2E validation
@@ -56,7 +56,7 @@ Computer Science student focused on **Data Engineering** — building reliable, 
 * **Serverless architecture**: ~200 jobs/day, $0.15-0.80/month (within free tier)
 * **Performance optimizations**: Lazy imports, async I/O, resource blocking, exponential backoff
 
-**Tech**: AWS (Lambda, S3, ECR, Glue, EventBridge), Terraform, Python 3.12, Playwright, Pandera, PyArrow, GitHub Actions
+**Tech**: AWS (Lambda, S3, ECR, EventBridge), Terraform, Python 3.12, Playwright, Pandera, PyArrow, GitHub Actions
 🔗 Repo: [https://github.com/S4njuuu3291/job-data-pipeline](https://github.com/S4njuuu3291/job-data-pipeline)
 
 ---
