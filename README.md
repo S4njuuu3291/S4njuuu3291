@@ -6,125 +6,125 @@
 </p>
 
 <h2 align="center">Sanju</h2>
-<p align="center"><strong>Data Engineer</strong> • Event-driven Streaming & Batch Data Pipelines</p>
+<p align="center"><strong>Data Engineer</strong> • Building Resilient, Type-Safe Data Pipelines with 115+ Comprehensive Tests</p>
 
 ---
 
 ## 👋 About Me
 
-Computer Science student focused on **Data Engineering** — building reliable, production-grade data pipelines from ingestion to analytics-ready datasets.
+Data Engineer specializing in **reliable, production-grade systems**. Building with Contract-Driven Development (Pydantic v2), defensive coding practices, and 115+ automated tests to ensure data integrity across AWS and GCP.
 
-**Core Principles**:
-* **Production Engineering**: Type-safe code (Pydantic), 115+ tests, custom exception handling
-* **Data Reliability**: Schema validation, idempotent operations, quality checks
-* **Architecture**: Layered design (Bronze/Silver/Gold), modular & config-driven
-* **Streaming & Batch**: Event-time processing, stateful aggregations, incremental transforms
-* **Quality Assurance**: Unit/integration/E2E tests, structured logging, monitoring
+Philosophy: **Resilience > Convenience**. Choose technologies that guarantee data safety, not shortcuts.
 
 ---
 
-## 🧱 Core Engineering Stack
+## 🧱 Core Stack
 
-* **Languages**: Python 3.12+, SQL, Bash
-* **Streaming**: Apache Kafka (Confluent, KRaft), Avro serialization | Spark Structured Streaming
-* **Batch Orchestration**: Apache Airflow 3.1+ (TaskFlow API)
-* **Transformation**: dbt 1.8+ (incremental models, tests)
-* **Databases**: PostgreSQL, BigQuery (partitioned & clustered)
-* **Cloud**: AWS (Lambda, S3, ECR, EventBridge, Athena) | GCP (GCS, BigQuery, Secret Manager)
-* **IaC & DevOps**: Terraform, Docker, GitHub Actions
-* **Data Quality**: Pydantic v2, Pandera, dbt tests, custom exceptions
-* **Testing**: pytest (115+ tests), httpx mocking, E2E validation
-* **Web Scraping**: Playwright (headless automation, anti-bot evasion)
-* **Visualization**: Grafana
-* **HTTP Clients**: httpx, tenacity (exponential backoff)
+**Orchestration** | Python 3.12+, Airflow 3.1.3, AWS Step Functions, Terraform
+
+**Streaming** | Kafka (KRaft, Confluent Schema Registry), Spark Structured Streaming, Avro
+
+**Data** | BigQuery, PostgreSQL 16, dbt 1.8+
+
+**Reliability** ⭐ | Pydantic v2, pytest (115+ tests), Tenacity, custom exceptions
+
+**Cloud** | AWS (Lambda, S3, Step Functions, EventBridge, Glue, Athena, ECR) | GCP (BigQuery, GCS, Secret Manager)
+
+**DevOps** | Docker, GitHub Actions, Playwright
 
 ---
 
-## 🚀 Selected Projects
+
+## �🚀 Featured Projects (Top 3)
 
 ### 🌐 Serverless Job Scraping Pipeline — AWS Lambda & Terraform
 
-**Daily automated web scraping with IaC deployment**
+**Production medallion ETL: parallel scrapers (3x) → Silver validation → Slack alerts**
 
-* Scrapes 3 Indonesian job platforms (Kalibrr, Glints, JobStreet) via **Playwright headless browsers**
-* **Anti-bot evasion**: Stealth plugins, navigator.webdriver removal, custom user agents
-* **Data validation** with Pandera schemas before storage
-* **Partitioned Parquet files** in S3 (Bronze layer: `platform=/ingestion_date=/`)
-* **AWS Glue catalog** → Athena SQL queries for analytics
-* **EventBridge scheduler** triggers daily at 5 AM WIB
-* **4-stage CI/CD pipeline**: test → Terraform provision → Docker build → Lambda deploy
-* **Serverless architecture**: ~200 jobs/day, $0.15-0.80/month (within free tier)
-* **Performance optimizations**: Lazy imports, async I/O, resource blocking, exponential backoff
+* **Parallel Step Functions**: 60% speedup (135s → 54s) with 3 concurrent Lambda scrapers
+* **Medallion architecture**: Bronze → Silver (19-field Pydantic schema, MD5 dedup) → Query (Athena)
+* **Auto-categorization**: NEW vs RE-POST jobs with 7-day lookback
+* **Slack notifications**: Block Kit alerts (9 AM & 4 PM WIB)
+* **Reliability**: DLQ, 2-attempt retry, exponential backoff
 
-**Tech**: AWS (Lambda, S3, ECR, EventBridge), Terraform, Python 3.12, Playwright, Pandera, PyArrow, GitHub Actions
-🔗 Repo: [https://github.com/S4njuuu3291/job-data-pipeline](https://github.com/S4njuuu3291/job-data-pipeline)
+**Metrics**: ~65s end-to-end | 100% Pydantic validation | 4-stage CI/CD (pytest → Terraform → ECR → Lambda)
 
----
-
-### 🔷 Realtime Crypto Streaming Pipeline — Kafka & Spark
-
-**Stateful event-driven streaming with Avro serialization**
-
-* Live trade ingestion from Binance WebSocket → Pydantic validation → Kafka (20 partitions, KRaft mode)
-* **Avro serialization** with Confluent Schema Registry for type safety
-* **Idempotent producer** (acks=all, at-least-once delivery)
-* **Spark Structured Streaming**: event-time windows, watermarking, stateful OHLC aggregation
-* Multi-timeframe candles (1m, 5m, 15m, 45m, 1h) via PostgreSQL views
-* **Idempotent sink**: UPSERT with composite primary keys
-* Grafana dashboard with real-time candlestick visualization
-* Fault-tolerant with checkpointing
-
-**Tech**: Kafka (Confluent, KRaft), Avro, Spark Structured Streaming, PostgreSQL, Grafana, Docker
-🔗 Repo: [https://github.com/S4njuuu3291/realtime-crypto-price-dashboard](https://github.com/S4njuuu3291/realtime-crypto-price-dashboard)
+🔗 [job-data-pipeline](https://github.com/S4njuuu3291/job-data-pipeline)
 
 ---
 
 ### 🌍 Global Commodity Data Platform — Airflow, GCP & dbt
 
-**Production batch platform with comprehensive testing**
+**Batch pipeline: multi-source APIs → GCS Bronze → BigQuery + 11 dbt models. 115+ test coverage.**
 
-* **115 unit + integration tests** (100% passing) with pytest
-* Multi-source ingestion: metals, FX, macro indicators, news APIs
-* **Type-safe Pydantic v2 models** + **custom exception hierarchy** (8 types)
-* **Tenacity retry logic** with exponential backoff for API resilience
-* GCS Bronze layer (date-partitioned NDJSON) → **BigQuery warehouse**
-* **11 dbt incremental models**: staging → dimension → fact → mart (SAFE_CAST for data quality)
-* E2E validation pipeline with schema/quality/relationship tests
-* Environment-based config (.env + GCP Secret Manager)
+* **Multi-source ingestion**: Metals APIs, FX rates, macro indicators (Pydantic v2 validation)
+* **115+ pytest cases**: Unit, integration, E2E across all transformation layers
+* **8 custom exceptions**: Precise error classification and recovery
+* **BigQuery warehouse**: 11 dbt incremental models (staging → dimension → fact → mart)
+* **Data quality gates**: SAFE_CAST, dbt tests (relationships, uniqueness), Secret Manager creds
 
-**Tech**: Airflow 3.1.3 (TaskFlow API), GCP (BigQuery, GCS), dbt 1.8+, Pydantic v2, pytest, Docker
-🔗 Repo: [https://github.com/S4njuuu3291/phase4_global_commodity](https://github.com/S4njuuu3291/phase4_global_commodity)
+**Metrics**: 115+ tests | 3-layer medallion (Bronze/Silver/Gold) | 11 dbt models
+
+🔗 [phase4_global_commodity](https://github.com/S4njuuu3291/phase4_global_commodity)
 
 ---
 
-## 🧠 Engineering Interests
+### 🔷 Realtime Crypto Streaming Pipeline — Kafka & Spark
 
-* Production code quality: type safety, comprehensive testing, error handling
-* Event-driven architectures & pub/sub patterns
-* Stateful stream processing & event-time semantics
-* Data modeling & dimensional design (SCD, star schema)
-* Reliability: idempotency, retry mechanisms, circuit breakers
-* Data quality frameworks: validation, contracts, quality checks
-* Observability, replayability & failure handling
+**Event-driven: Binance WebSocket → Kafka → Spark aggregation → PostgreSQL → Grafana**
 
----
+* **Idempotent producer**: acks=all, at-least-once delivery with deduplication
+* **Avro schema registry**: Type-safe schema evolution via Confluent
+* **Spark Structured Streaming**: Event-time windows, watermarking, stateful OHLC (1m, 5m, 15m, 45m, 1h)
+* **Idempotent sink**: UPSERT on composite keys (symbol, timeframe, open_time)
+* **Fault tolerance**: Checkpointing, recovery, event replay
 
-## 📌 Current Focus
+**Reliability**: At-least-once with idempotent sink | Watermarking enabled | State checkpointing
 
-Deepening expertise in **streaming systems**, **distributed processing**, and **production-grade pipelines**:
-
-* **Code quality**: Type-safe Python (Pydantic), comprehensive test coverage (unit/integration/E2E)
-* **Reliability**: Custom exceptions, exponential backoff, idempotent operations
-* **Modern orchestration**: Airflow TaskFlow API, dynamic DAG generation
-* **Cloud-native patterns**: AWS & GCP, infrastructure as code (Terraform)
-* **Data modeling**: dbt incremental models, dimensional design, quality tests
-* **Serverless architectures**: AWS Lambda, event-driven ETL, cost optimization
+🔗 [realtime-crypto-price-dashboard](https://github.com/S4njuuu3291/realtime-crypto-price-dashboard)
 
 ---
 
-## 📬 Contact
+## 📦 Other Projects
 
-* LinkedIn: [https://www.linkedin.com/in/sanjukin-pinem](https://www.linkedin.com/in/sanjukin-pinem)
-* Email: [sanju329121@gmail.com](mailto:sanju329121@gmail.com)
+**Also built:** Metal Price ETL (Airflow) • Weather ETL (Cron) • Metal Price GCP (BigQuery) • Gold Price Slack Alerts • Real-Time Sales Analytics • CI/CD Learning  
+*3 featured systems above cover 90% of engineering depth.*
+
+---
+
+## 📊 Project Statistics
+
+| Metric | Achievement |
+|--------|-------------|
+| **Comprehensive Tests** | 115+ cases (pytest) |
+| **Cloud Platforms** | 2 (AWS & GCP) |
+| **Pipelines** | 3 featured + 6 additional |
+| **Orchestration** | Airflow 3.1.3 & AWS Step Functions |
+| **Data Warehouses** | PostgreSQL 16 & BigQuery |
+| **dbt Models** | 11 (incremental, fully tested) |
+| **Streaming Tech** | Kafka (KRaft) & Spark Structured Streaming |
+| **CI/CD Integration** | 100% Automated (GitHub Actions) |
+
+---
+
+## 🧠 Philosophy
+
+**What I've Proven** | Resilience > Convenience • Testing is insurance (115+ tests) • Event-time semantics matter (watermarking, late data) • Idempotency at scale prevents data corruption
+
+**Focus Areas** | Exactly-once processing • Data quality as first-class • Serverless reliability patterns • Multi-cloud consistency • Type-safe pipelines (Pydantic v2)
+
+---
+
+## 📌 Current Work
+
+**Now** | Spark Structured Streaming internals • Redpanda (lower-latency alternative to Kafka) • Data quality frameworks (anomaly detection, SLA monitoring) • Multi-cloud deployment patterns
+
+---
+
+## 📬 Contact & Links
+
+* **GitHub**: [S4njuuu3291](https://github.com/S4njuuu3291)
+* **LinkedIn**: [sanjukin-pinem](https://www.linkedin.com/in/sanjukin-pinem)
+* **Email**: [sanju329121@gmail.com](mailto:sanju329121@gmail.com)
 
 ---
