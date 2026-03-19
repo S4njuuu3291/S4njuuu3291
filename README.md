@@ -125,6 +125,6 @@ Philosophy: **Resilience > Convenience**. Choose technologies that guarantee dat
 
 * **GitHub**: [S4njuuu3291](https://github.com/S4njuuu3291)
 * **LinkedIn**: [sanjukin-pinem](https://www.linkedin.com/in/sanjukin-pinem)
-* **Email**: [sanju329121@gmail.com](mailto:sanju329121@gmail.com)
+* **Email**: [contact@sanjupinem.my.id](mailto:contact@sanjupinem.my.id)
 
 ---
